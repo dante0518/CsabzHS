@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>CsabzHS | All about Hearthstone</title>
+</head>
+<body>
+    
+    <div class="nav-container">
+        <div class="left-side">
+            <img src="src/games-hearthstone.svg" class="hs-logo">
+            <div class="logo-text">CsabzHS</div>
+        </div>
+        <div class="middle-side">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Twitch</a></li>
+                <li><a href="#">Merch</a></li>
+            </ul>
+        </div>
+        <div class="right-side">
+            <button class="login">Login</button>
+        </div>
+    </div>
+
+    <div class="hero-container">
+        <img src="src/csabzhs.jpg" alt="CsabzHS" class="hero-img">
+        <div class="text-container">
+            <h1>Meet CsabzHS</h1>
+            <h4>Welcome to the world of CsabzHS, a dedicated Twitch streamer who has been mastering Hearthstone since its release. <br>
+            With an engaging personality and unparalleled strategic insights, CsabzHS has captivated a loyal audience of viewers. <br>
+            Join his streams to experience expert gameplay, learn advanced tactics, and become part of a vibrant community of Hearthstone enthusiasts.
+            </h4>
+            <button class="discord">
+                <a href="#">Join Discord</a>
+            </button>
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <div class="table">
+            <ul>
+                <p>My Best Achievements</p>
+                <li>50x standard legend</li>
+                <li>Standard: rank 9 legend EU</li>
+                <li>Classic: rank 142 EU</li>
+                <li>Battlegrounds: 7094 rating</li>
+                <li>Arena: 12 wins</li>
+                <li>UEG Hearthstone 2020: I. place</li>
+                <li>IV. Barcraft Hearthstone cup: I. place</li>
+                <li>Hearthstone Masters Tour Madrid Qualifier: II. place</li>
+                <li>Legend speedrun (from bronze to legend): 5h 50min</li>
+            </ul>
+        </div>
+        <img src="src/hs-stats.jpg" class="hs-stats">
+    </div>
+
+    <div class="twitch-container">
+        <div id="twitch-embed"></div>
+        <div class="schedules">
+            <h1>Watch Online Streams</h1>
+            <p>Schedules</p>
+            <ul>
+                <li>Monday: 20-22</li>
+                <li>Tuesday: 20-22</li>
+                <li>Wednesday: 20-22</li>
+                <li>Thursday: 20-22</li>
+                <li>Friday: 20-22</li>
+                <li>Saturday: 20-22</li>
+                <li>Sunday: 20-22</li>
+            </ul>
+            <button class="discord notified">GET NOTIFIED</button>
+        </div>
+    </div>
+
+    <!-- SETUP -->
+
+    <div class="setup-container">
+        <div class="setup-img fade-border">
+            <img src="src/acer.png" alt="" class="setup-pic" id="acerImg">
+        </div>
+        <div class="description">
+            <h1 >Setup</h1>
+            <p class="fade-line" ></p>
+            <h3>Acer Nitro 5</h3>
+            <ul>
+                <li>CPU: AMD&reg; Ryzen&trade; 7 5800H</li>
+                <li>RAM: 16GB DDR4</li>
+                <li>GPU: Nvidia&reg; GeForce&reg; RTX&trade; 3070 8GB GDRR6</li>
+                <li>15.6" FHD 1920x1080P IPS LED, 144Hz</li>
+                <li>1TB PCIe NVMe SSD</li>
+            </ul>
+        </div>
+        <div class="sponsor-logo">
+            <p>Sponosred by</p>
+            <img src="src/acer-nitro.png">
+        </div>
+    </div>
+
+
+
+
+    <!-- FOOTER -->
+
+    <div class="socials">
+        <div class="social-media">
+            <a href=""><i class="bi bi-facebook"></i>Facebook</a>
+            <a href=""><i class="bi bi-discord"></i>Discord</a>
+            <a href=""><i class="bi bi-instagram"></i>Instagram</a>
+            <a href=""><i class="bi bi-twitter-x"></i>Twitter</a>
+            <a href=""><i class="bi bi-youtube"></i>YouTube</a>
+        </div>
+        <div class="contact">
+            <ul>
+                <li>Discord: @CsabzHS_</li>
+                <li>//</li>
+                <li>Email: csabzhs@gmail.com</li>
+                <li>//</li>
+                <li>Hungary, Debrecen</li>
+            </ul>
+        </div>
+        <footer>
+            <p>All Rights Reserverd &copy; CsabzHS, 2024</p>
+        </footer>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+    <script type="text/javascript">
+        new Twitch.Player("twitch-embed", {
+          channel: "csabzhs_",
+          width: 600,
+          height: 350,
+        });
+      </script>
+</body>
+</html>
