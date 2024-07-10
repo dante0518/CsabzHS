@@ -1,3 +1,4 @@
+// SLIDE ANIMATIONS
 const acerImg = document.getElementById('acerImg');
 const description = document.querySelector('.description');
 const sponsorImg = document.querySelector('.sponsor-logo');
@@ -31,35 +32,106 @@ function handleScroll() {
 window.onbeforeunload = () => {window.scrollTo(0,0)};
 window.addEventListener('scroll', handleScroll);
 
-const counter = document.querySelector('.counter');
-const loadingBar = document.querySelector('.loading-bar-front');
-const container = document.querySelector('.loading-container');
+// END SLIDE ANIMATIONS
 
-let idx = 0;
-updatenum();
 
-function updatenum() {
-    counter.innerHTML = idx + "%";
-    loadingBar.style.width = idx + "%";
-    idx+=2;
+// LOGIN POPUP
 
-    if (idx <= 100) {
-        setTimeout(updatenum, 30);
-    } else {
-        console.log("loaded");
-        setTimeout(fadeOutContainer, 1000);
+document.querySelector('.show-login').addEventListener('click', function(){
+    document.querySelector('.login-popup').classList.add('active');
+    document.querySelector('.nav-container').classList.add('blur');
+    document.querySelector('.hero-container').classList.add('blur');
+    document.querySelector('.testimonials').classList.add('blur');
+    document.querySelector('.twitch-container').classList.add('blur');
+    document.querySelector('.setup-container').classList.add('blur');
+    document.querySelector('.socials').classList.add('blur');
+
+    if(document.querySelector('.login-popup').classList.contains('active')){
+        disableScroll();
     }
+})
+
+document.querySelector('.close-btn').addEventListener('click', function(){
+    document.querySelector('.login-popup').classList.remove('active')
+    document.querySelector('.nav-container').classList.remove('blur');
+    document.querySelector('.hero-container').classList.remove('blur');
+    document.querySelector('.testimonials').classList.remove('blur');
+    document.querySelector('.twitch-container').classList.remove('blur');
+    document.querySelector('.setup-container').classList.remove('blur');
+    document.querySelector('.socials').classList.remove('blur');
+    enableScroll();
+})
+
+function disableScroll(){
+    document.body.style.overflow = "hidden";
+}
+function enableScroll(){
+    document.body.style.overflow = "";
 }
 
-function fadeOutContainer() {
-    container.classList.add('fade-out');
-    setTimeout(hideLoading, 1000); 
-}
+// END LOGIN POPUP
 
-function hideLoading() {
-    container.style.display = "none";
-    console.log("Container hidden");
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const counter = document.querySelector('.counter');
+// const loadingBar = document.querySelector('.loading-bar-front');
+// const container = document.querySelector('.loading-container');
+
+// let idx = 0;
+// updatenum();
+
+// function updatenum() {
+//     counter.innerHTML = idx + "%";
+//     loadingBar.style.width = idx + "%";
+//     idx+=2;
+
+//     if (idx <= 100) {
+//         setTimeout(updatenum, 30);
+//     } else {
+//         console.log("loaded");
+//         setTimeout(fadeOutContainer, 1000);
+//     }
+// }
+
+// function fadeOutContainer() {
+//     container.classList.add('fade-out');
+//     setTimeout(hideLoading, 1000); 
+// }
+
+// function hideLoading() {
+//     container.style.display = "none";
+//     console.log("Container hidden");
+// }
 
 
 

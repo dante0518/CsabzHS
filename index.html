@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
     <title>CsabzHS | All about Hearthstone</title>
 </head>
 <body>
 
-    <div class="loading-container">
+    <!-- <div class="loading-container">
         <div class="loading-items">
             <h1>Loading</h1>
             <div class="counter">0%</div>
@@ -17,7 +18,7 @@
                 <div class="loading-bar-front"></div>
             </div>
         </div>
-    </div>
+    </div> -->
     
     <div class="nav-container">
         <div class="left-side">
@@ -34,9 +35,40 @@
             </ul>
         </div>
         <div class="right-side">
-            <button class="login">Login</button>
+            <button class="login show-login">Login</button>
         </div>
     </div>
+
+    <!-- LOGIN FORM -->
+
+     <div class="login-popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>Log in</h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="emailInput" placeholder="Enter email">
+            </div>
+            <div class="form-element">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="passwordInput" placeholder="Enter password">
+            </div>
+            <div class="form-element">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <div class="form-element">
+                <button class="sign-in" id="login" onclick="login()">Log in</button>
+                <button class="register" id="register" onclick="register()">Register</button>
+            </div>
+            <div class="form-element">
+                <a href="#">Forgot password?</a>
+            </div>
+        </div>
+     </div>
+
+    <!-- END OF LOGIN -->
+
 
     <div class="hero-container">
         <img src="src/csabzhs.jpg" alt="CsabzHS" class="hero-img">
@@ -139,7 +171,7 @@
         </footer>
     </div>
 
-
+    <script type="module" src="firebase.js"></script>
     <script src="script.js"></script>
     <script src="https://player.twitch.tv/js/embed/v1.js"></script>
     <script type="text/javascript">
