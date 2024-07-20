@@ -305,6 +305,7 @@ body {
     display: inline-flex;
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: space-evenly;
     gap: 25px;
     position: relative;
 }
@@ -561,7 +562,7 @@ button.discord.notified:hover {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     position: relative;
     width: 100%;
     background-color: var(--bacground-nav);
